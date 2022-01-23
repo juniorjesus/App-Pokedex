@@ -1,0 +1,29 @@
+.pokemon-list {
+    max-height: 500px;
+    overflow-y: auto;
+    
+    &__link,
+    &__failed,
+    &__loading {
+        font-size: 1.5rem;
+        letter-spacing: 0.05rem;
+        text-transform: capitalize;
+        color: #000;
+        display: block;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        &:hover,
+        &:focus {
+            background: cornflowerblue;
+        }
+    }
+
+    &__img {
+        width: 30px;
+        height: 30px;
+    }
+}

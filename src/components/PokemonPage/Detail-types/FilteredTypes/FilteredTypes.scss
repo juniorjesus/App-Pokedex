@@ -1,0 +1,32 @@
+.type-filter-close {
+    padding: 15px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    letter-spacing: 0.05em;
+    font-size: 1.5rem;
+    background: rgb(194, 206, 249);
+}
+
+.type-filter-fail {
+    &__button {
+        font-size: 1.25rem;
+        padding: 15px 20px;
+        padding-left: 25px;
+        position: relative;
+        display: inline-block;
+        color: #000;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &::before {
+            content: '\2190';
+            position: absolute;
+            left: 0;
+        }
+    }
+}

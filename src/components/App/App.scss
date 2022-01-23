@@ -1,0 +1,111 @@
+*, *::before, *::after {
+    box-sizing: border-box !important;
+    margin: 0 !important ;
+    padding: 0 !important;
+}
+
+html {
+    scroll-behavior: smooth !important;
+    font-size: 100% !important;
+
+    @media screen and (max-width: 767.98px) {
+        font-size: 90% !important;
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif !important;
+    line-height: 1.2 !important;
+    position: relative !important;
+    overflow-x: hidden !important;
+    background: repeating-linear-gradient(45deg, #f3f3f3, #fafafa 5px);
+    width: 100vw !important;
+
+    &.menu-open {
+        overflow: hidden !important;
+        
+        .nav {
+            visibility: visible !important;
+            transform: translateX(0) !important;
+        }
+
+        .nav-burger {
+            span {
+                &:nth-child(1) {
+                    top: 18px !important;
+                    transform: rotate(135deg) !important;
+                }
+    
+                &:nth-child(2) {
+                    opacity: 0 !important;
+                    left: -60px !important;
+                }
+    
+                &:nth-child(3) {
+                    top: 18px !important;
+                    transform: rotate(-135deg) !important;
+                }
+            }
+        }
+    }
+}
+
+ul {
+    list-style: none !important;
+}
+
+.img {
+    display: block !important;
+    max-width: 100% !important;
+}
+
+.link {
+    text-decoration: none !important;
+}
+
+.container {
+    max-width: 1140px !important;
+    width: 100% !important;
+    padding: 0 15px !important;
+    margin: 0 auto !important;
+}
+
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 960px !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 720px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 540px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        max-width: 100% !important;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+}
+
+.header {
+    background: #000 !important;
+
+    @media screen and (max-width: 767.98px) {
+        padding: 15px !important;
+    }
+}

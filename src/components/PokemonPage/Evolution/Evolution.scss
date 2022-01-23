@@ -1,0 +1,51 @@
+.evolution {
+    &__headline {
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    &__list {
+        display: flex !important;
+        justify-content: space-around !important;
+
+        @media screen and (max-width: 767.98px) {
+            flex-direction: column !important;
+        }
+    }
+
+    &__item {
+        flex: 0 1 50% !important;
+        position: relative !important;
+        display: flex !important;
+
+        &:not(:last-child) {
+            @media screen and (max-width: 767.98px) {
+                margin-bottom: 30px !important;
+            }
+
+            &::after {
+                content: '\27A4' !important;
+                font-size: 2.5rem !important;
+                transform: translateX(50%) !important;
+                align-self: center !important;
+    
+                @media screen and (max-width: 767.98px) {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        color: #000;
+    }
+
+    &__fail {
+        text-align: center;
+    }
+}

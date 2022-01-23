@@ -1,0 +1,19 @@
+.main-headline {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 3.5rem;
+    font-style: italic;
+    text-transform: capitalize;
+
+    @media screen and (max-width: 767.98px) {
+        padding: 25px 0;
+    }
+
+    &--home {
+        flex: 0 1 100%;
+    }
+
+    &--pokemon {
+        grid-area: headline;
+    }
+}

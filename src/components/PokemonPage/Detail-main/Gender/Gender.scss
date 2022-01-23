@@ -1,0 +1,10 @@
+.gender {
+    &__list {
+        display: flex !important;
+    }
+
+    &__item {
+        font-size: 1.25rem !important;
+        margin: 0 10px !important;
+    }
+}

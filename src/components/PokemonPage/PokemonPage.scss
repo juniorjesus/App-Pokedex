@@ -1,0 +1,126 @@
+.pokemon  {
+    display: grid !important;
+    grid-template: "headline headline"
+                    "image main"
+                    "type stats"
+                    "evolution evolution" / 1fr 1fr !important;
+    grid-gap: 20px !important;
+
+    @media screen and (max-width: 991.98px) {
+        grid-template : "headline headline "
+                        "image image"
+                        "main main"
+                        "type type"
+                        "stats stats"
+                        "evolution evolution" / 1fr 1fr !important;
+    }
+
+    &__image {
+        grid-area: image !important;
+        width: 350px !important;
+        height: 350px !important;
+        padding: 40px !important;
+        box-shadow: 0 0 20px #ccc !important;
+        justify-self: center !important;
+        align-self: center !important;
+        border-radius: 50% !important;
+
+        @media screen and (max-width: 767.98px) {
+            padding: 0 !important;
+        }
+
+        @media screen and (max-width: 575.98px) {
+            width: 250px !important;
+            height: 250px !important;
+        }
+    }
+
+    &__details--main {
+        grid-area: main !important;
+    }
+
+    &__details--stats {
+        grid-area: stats !important;
+    }
+
+    &__details--evolution {
+        grid-area: evolution !important;
+    }
+
+    &__details--type {
+        grid-area: type !important;
+    }
+
+    &__details--main,
+    &__details--type {
+        display: grid !important;
+        grid-gap: 20px !important;
+    }
+
+    &__details {
+        padding: 15px !important ;
+        box-shadow: 0 0 20px #ccc !important;
+        font-size: 1.25rem !important;
+    }
+
+    &__details-headline {
+        font-size: 25px !important;
+    }
+
+    &__info {
+        display: flex !important;
+        justify-content: space-between !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+    }
+
+    &__go-home {
+        height: 50px !important;
+        font-size: 1.25rem !important;
+        cursor: pointer !important;
+        background: cornflowerblue !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        color: #fff !important;
+        position: relative !important;
+        overflow: hidden !important;
+
+        @media screen and (max-width: 991.98px ) {
+            grid-column: 1/-1 !important;
+        }
+
+        &::after {
+            content: '';
+            position: absolute !important;
+            top: 0 !important;
+            left: -100% !important;
+            transform: skew(-45deg) !important;
+            background: #fff !important;
+            filter: blur(40px) !important;
+            width: 15% !important;
+            height: 100% !important;
+            transition: left 1s ease-out !important;
+        }
+
+        &:hover,
+        &:focus {
+            background: darken($color: cornflowerblue, $amount: 5) !important;
+
+            &::after {
+                left: 120% !important;
+            }
+        }
+    }
+
+    &__type-list {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
+        grid-auto-rows: 40px !important;
+        grid-gap: 10px !important;
+    }
+
+    &__type-headline {
+        margin-bottom: 20px !important;
+    }
+}

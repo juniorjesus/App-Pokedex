@@ -87,7 +87,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
-import { startLoginEmailPassword, startGoogleLogin } from '../../actions/auth';
+import { startLoginEmailPassword, startGoogleLogin, loginFacebook } from '../../actions/auth';
 
 export const LoginScreen = () => {
 
@@ -108,6 +108,10 @@ export const LoginScreen = () => {
 
     const handleGoogleLogin = () => {
         dispatch( startGoogleLogin() );
+    }
+    const handleFacebook = () => {
+        dispatch(loginFacebook());
+        // history.replace('/auth');
     }
 
 
@@ -161,6 +165,18 @@ export const LoginScreen = () => {
                         </div>
                         <p className="btn-text">
                             <b>Accede con Google</b>
+                        </p>
+                    </div>
+
+                    <div 
+                        className="google-btn"
+                        onClick={ handleFacebook }
+                    >
+                        <div className="google-icon-wrapper">
+                            <img className="google-icon" src="https://res.cloudinary.com/djbaqvlnn/image/upload/v1642200372/Amazonas/facebook-logo-3-1_fegy6m_aebzrr.png" alt="google button" />
+                        </div>
+                        <p className="btn-text">
+                            <b>Accede con Facebook</b>
                         </p>
                     </div>
                 </div>

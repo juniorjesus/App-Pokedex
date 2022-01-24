@@ -1,7 +1,8 @@
 // import { types } from "node-sass"
 import Swal from 'sweetalert2';
 import { types } from '../types/types'
-import { firebase, googleAuthProvider, } from '../firebase/firebaseConfig'
+import { getAuth,signInWithPopup} from "firebase/auth"
+import { facebook, firebase, googleAuthProvider, } from '../firebase/firebaseConfig'
 import { finishLoading, startLoading } from './ui'
 
 
@@ -75,6 +76,22 @@ export const startGoogleLogin = () => {
         })
     }
 }
+
+export const loginFacebook = () => {
+
+    return(dispatch) => {
+    const auth = getAuth();
+       
+        signInWithPopup(auth,facebook)
+        .then(({user}) => {
+          dispatch(login(user.uid,user.displayName))
+        })
+        .catch(e =>{
+            console.log(e);
+        })
+    }
+}
+
 
 export const login = (uid, displayName) =>( {
     

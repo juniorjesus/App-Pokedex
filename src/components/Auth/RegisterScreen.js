@@ -174,7 +174,7 @@ export const RegisterScreen = () => {
 
     return (
         <>
-            <h3 className="auth__title">Register</h3>
+            <h3 className="auth__title">Registrarse</h3>
 
             <form 
                 onSubmit={ handleRegister }
@@ -234,7 +234,7 @@ export const RegisterScreen = () => {
                     type="submit"
                     className="btn btn-primary btn-block mb-5"
                 >
-                    Register
+                    Registrarse
                 </button>
 
                
@@ -243,7 +243,7 @@ export const RegisterScreen = () => {
                     to="/auth/login"
                     className="link"
                 >
-                    Already registered?
+                    Ya estas registrado?
                 </Link>
 
             </form>

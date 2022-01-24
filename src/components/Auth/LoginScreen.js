@@ -113,7 +113,7 @@ export const LoginScreen = () => {
 
     return (
         <>
-            <h3 className="auth__title">Login</h3>
+            <h3 className="auth__title">Inicia sesión</h3>
 
             <form 
                 onSubmit={ handleLogin }
@@ -145,12 +145,12 @@ export const LoginScreen = () => {
                     className="btn btn-primary btn-block"
                     disabled={ loading }
                 >
-                    Login
+                    Continuar
                 </button>
 
                 
                 <div className="auth__social-networks">
-                    <p>Login with social networks</p>
+                    <p>Puedes acceder con Google</p>
 
                     <div 
                         className="google-btn"
@@ -160,7 +160,7 @@ export const LoginScreen = () => {
                             <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
                         </div>
                         <p className="btn-text">
-                            <b>Sign in with google</b>
+                            <b>Accede con Google</b>
                         </p>
                     </div>
                 </div>
@@ -169,7 +169,7 @@ export const LoginScreen = () => {
                     to="/auth/register"
                     className="link"
                 >
-                    Create new account    
+                    No tienes cuenta? Registrate
                 </Link>
 
             </form>

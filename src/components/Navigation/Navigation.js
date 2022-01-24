@@ -30,6 +30,7 @@ const Navigation = () => {
             <NavBurger />
             <nav className="nav">
                 <Search sm />
+                
                 <ul className="nav__list">
                     <li className="nav__item">
                         <NavLink className="nav__link link" to={{ pathname: '/' }} exact>Inicio</NavLink>
@@ -37,19 +38,19 @@ const Navigation = () => {
                     <li className="nav__item">
                         <NavLink className="nav__link link" to={{ pathname: '/additional' }}>Pokemon Favoritos</NavLink>
                     </li>
-                    <li className="nav__item">
+                    {/* <li className="nav__item">
                         <NavLink className="nav__link link" to={{ pathname: '/auth/login' }}>login</NavLink>
                     </li>
 
                     <li className="nav__item">
                         <NavLink className="nav__link link" to={{ pathname: '/auth/logout' }}>logout</NavLink>
-                    </li>
+                    </li> */}
 
                     <button 
                     className="btn"
                     onClick={ handleLogout }
                 >
-                    Logout
+                    logout
                 </button>
                 </ul>
             </nav>

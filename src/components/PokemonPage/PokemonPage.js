@@ -35,7 +35,7 @@ const PokemonPage = () => {
     }
 
     return (
-        <section className="pokemon ">
+        <section className="pokemon animate__animated animate__fadeIn animate__faster">
             <MainHeadline headline={pokemonPage.name} />
             <div className="pokemon__image">
                 <img className="img" src={pokemonPage.image} alt={pokemonPage.name} />

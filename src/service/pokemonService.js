@@ -47,28 +47,28 @@ export default class PokemonService {
         const habitat = await this.getPokemonHabitat(species);
         const weaknesses = await this.getPokemonWeaknesses(types);
         const strengths = await this.getPokemonStrengths(types);
-        const gender = await this.getPokemonGender(pokemonName);
+        const genero = await this.getPokemonGender(pokemonName);
         const evolution = await this.getPokemonEvolution(species);
         const description = await this.getPokemonDescription(species);
         const image = this.getPokemonImage(sprites);
-        const pokemonTypes = this.getPokemonTypes(types);
-        const pokemonStats = this.getPokemonStats(stats);
+        const pokemonTipos = this.getPokemonTipos(types);
+        const pokemonStadisticas = this.getPokemonStadisticas(stats);
 
         return {
             name,
             image,
             description,
-            gender,
+            genero,
             height: height / 10,
             weight: weight / 10,
             abilities: pokemonAbilities,
             id,
-            types: pokemonTypes,
+            types: pokemonTipos,
             category,
             habitat,
             weaknesses,
             strengths,
-            stats: pokemonStats,
+            stats: pokemonStadisticas,
             evolution
         }
     }
@@ -124,7 +124,7 @@ export default class PokemonService {
         return await getImages(evolutionChain);
     }
 
-    getPokemonStats = data => {
+    getPokemonStadisticas = data => {
         return data.map(item => ({ [item.stat.name]: item['base_stat'] }));
     }
 
@@ -201,14 +201,14 @@ export default class PokemonService {
         const pokemonGenderResponse = await Promise.all(genderUrls.map(url => fetch(url)));
         const pokemonGenderResult = await Promise.all(pokemonGenderResponse.map(data => data.json()));
 
-        const gender = pokemonGenderResult.filter(genderData => {
+        const genero = pokemonGenderResult.filter(genderData => {
             return genderData['pokemon_species_details']?.find(genderItem => genderItem['pokemon_species']?.['name'] === data);
         })
 
-        return gender.map(({ name }) => name);
+        return genero.map(({ name }) => name);
     }
 
-    getPokemonTypes = data => {
+    getPokemonTipos = data => {
         return data.map(({ type: { name } }) => name);
     }
 

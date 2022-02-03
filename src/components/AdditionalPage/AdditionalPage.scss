@@ -1,0 +1,11 @@
+.pokemon {
+    display: grid !important;
+    grid-template: "headline headline"
+                    "image main"
+                    "type stats"
+                    "evolution evolution" / 1fr 1fr !important;
+    grid-gap: 20px !important;
+    background-image: url(https://res.cloudinary.com/djbaqvlnn/image/upload/v1643857661/illustration-white-background-cartoon-Pok-mon-Toy-Bulbasaur-play-Squirtle-Charmander-GameBoy-figurine-236943_pfjsxe.jpg);
+    // background-size: cover;
+    // background-attachment: fixed;
+}

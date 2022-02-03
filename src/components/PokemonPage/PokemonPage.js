@@ -37,7 +37,7 @@ const PokemonPage = () => {
     return (
         <section className="pokemon animate__animated animate__fadeIn animate__faster">
             <MainHeadline headline={pokemonPage.name} />
-            <div className="pokemon__image">
+            <div className="pokemon__image animate__animated animate__fadeIn animate__faster">
                 <img className="img" src={pokemonPage.image} alt={pokemonPage.name} />
             </div>
             <div className="pokemon__details pokemon__details--main">
@@ -52,7 +52,7 @@ const PokemonPage = () => {
             <div className="pokemon__details pokemon__details--evolution">
                 <Evolution data={pokemonPage.evolution} />
             </div>
-            <Link to={{ pathname: '/' }} className="pokemon__go-home link">Descubre más Pokemones</Link>
+            <Link to={{ pathname: '/' }} className="pokemon__go-home link ">Descubre más Pokemones</Link>
         </section>
     )
 }
